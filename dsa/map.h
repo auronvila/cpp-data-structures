@@ -28,6 +28,26 @@ public:
     void Put(K key, V newValue);
 
     void Remove(K key);
+
+    V &operator[](const K &key) {
+        if (head == nullptr) {
+            head = new Node(key, V{});
+            return head->value;
+        }
+
+        Node *itr = head;
+        while (itr != nullptr) {
+            if (itr->key == key) {
+                return itr->value;
+            }
+            if (itr->next == nullptr) break;
+            itr = itr->next;
+        }
+
+        // Key not found, insert new node at end
+        itr->next = new Node(key, V{});
+        return itr->next->value;
+    }
 };
 
 template<typename K, typename V>
@@ -100,4 +120,5 @@ void Map<K, V>::Remove(K key) {
 
     throw std::runtime_error("Key was not found");
 }
+
 #endif //MAP_H

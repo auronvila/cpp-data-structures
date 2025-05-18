@@ -51,6 +51,7 @@ int main() {
     my_map.Put(2, 5);
 
     my_map.Remove(2);
+    std::cout << my_map[5] << std::endl;
     my_map.PrintItems();
     return 0;
 }
