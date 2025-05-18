@@ -2,6 +2,7 @@
 #include"dsa/linkedList.h"
 #include "dsa/stack.h"
 #include<string>
+#include "dsa/queue.h"
 
 int main() {
     // LinkedList myList;
@@ -18,14 +19,26 @@ int main() {
     // std::cout << "----" << std::endl;
     // myList.PrintLinkedList();
 
-    Stack<int> myStack;
-    std::cout << myStack.Size() << std::endl;
-    std::cout << myStack.IsEmpty() << std::endl;
+    // Stack<int> myStack;
+    // std::cout << myStack.Size() << std::endl;
+    // std::cout << myStack.IsEmpty() << std::endl;
+    //
+    // myStack.Push(1);
+    // myStack.Push(2);
+    // myStack.Push(3);
+    // myStack.Pop();
+    // myStack.PrintElements();
 
-    myStack.Push(1);
-    myStack.Push(2);
-    myStack.Push(3);
-    myStack.Pop();
-    myStack.PrintElements();
+    Queue<int> my_queue;
+    // my_queue.Push(1);
+    my_queue.Push(2);
+    my_queue.Push(3);
+    my_queue.Pop();
+
+    my_queue.PrintElements();
+
+    // std::cout << my_queue.Size() << std::endl;
+    // std::cout << my_queue.Front();
+    // std::cout << my_queue.Back();
     return 0;
 }

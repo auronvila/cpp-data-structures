@@ -9,5 +9,7 @@ add_executable(data_structures
 
         dsa/stack.h
 
+        dsa/queue.h
+
         main.cpp
 )
