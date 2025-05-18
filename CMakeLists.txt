@@ -11,5 +11,7 @@ add_executable(data_structures
 
         dsa/queue.h
 
+        dsa/map.h
+
         main.cpp
 )

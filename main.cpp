@@ -3,6 +3,7 @@
 #include "dsa/stack.h"
 #include<string>
 #include "dsa/queue.h"
+#include "dsa/map.h"
 
 int main() {
     // LinkedList myList;
@@ -29,16 +30,27 @@ int main() {
     // myStack.Pop();
     // myStack.PrintElements();
 
-    Queue<int> my_queue;
+    // Queue<int> my_queue;
     // my_queue.Push(1);
-    my_queue.Push(2);
-    my_queue.Push(3);
-    my_queue.Pop();
-
-    my_queue.PrintElements();
+    // my_queue.Push(2);
+    // my_queue.Push(3);
+    // my_queue.Pop();
+    //
+    // my_queue.PrintElements();
 
     // std::cout << my_queue.Size() << std::endl;
     // std::cout << my_queue.Front();
     // std::cout << my_queue.Back();
+
+    Map<int, int> my_map;
+    my_map.Insert(1, 1);
+    my_map.Insert(2, 2);
+    my_map.Insert(4, 4);
+    my_map.Insert(5, 5);
+    my_map.Insert(6, 6);
+    my_map.Put(2, 5);
+
+    my_map.Remove(2);
+    my_map.PrintItems();
     return 0;
 }
