@@ -30,28 +30,31 @@ int main() {
     // myStack.Pop();
     // myStack.PrintElements();
 
-    // Queue<int> my_queue;
-    // my_queue.Push(1);
-    // my_queue.Push(2);
-    // my_queue.Push(3);
+    Queue<int> my_queue;
+    my_queue.Push(1);
+    my_queue.Push(2);
+    my_queue.Push(3);
     // my_queue.Pop();
-    //
-    // my_queue.PrintElements();
+
+    for (auto queue: my_queue) {
+        std::cout << queue << std::endl;
+    }
+
 
     // std::cout << my_queue.Size() << std::endl;
     // std::cout << my_queue.Front();
     // std::cout << my_queue.Back();
 
-    Map<int, int> my_map;
-    my_map.Insert(1, 1);
-    my_map.Insert(2, 2);
-    my_map.Insert(4, 4);
-    my_map.Insert(5, 5);
-    my_map.Insert(6, 6);
-    my_map.Put(2, 5);
-
-    my_map.Remove(2);
-    std::cout << my_map[5] << std::endl;
-    my_map.PrintItems();
+    // Map<int, int> my_map;
+    // my_map.Insert(1, 1);
+    // my_map.Insert(2, 2);
+    // my_map.Insert(4, 4);
+    // my_map.Insert(5, 5);
+    // my_map.Insert(6, 6);
+    // my_map.Put(2, 5);
+    //
+    // my_map.Remove(2);
+    // std::cout << my_map[5] << std::endl;
+    // my_map.PrintItems();
     return 0;
 }

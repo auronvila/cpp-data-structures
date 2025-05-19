@@ -36,6 +36,38 @@ public:
     T Back();
 
     void PrintElements();
+
+    class Iterator {
+    private:
+        Node *current;
+
+    public:
+        Iterator(Node *node): current(node) {
+        }
+
+        T &operator*() const {
+            return current->value;
+        }
+
+        Iterator &operator++() {
+            if (current) current = current->previous;
+            return *this;
+        }
+
+
+        bool operator !=(const Iterator &other) const {
+            return current != other.current;
+        }
+    };
+
+    // iterator functions
+    Iterator begin() const {
+        return Iterator(front);
+    }
+
+    Iterator end() const {
+        return Iterator(nullptr);
+    }
 };
 
 template<typename T>
