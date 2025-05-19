@@ -6,6 +6,16 @@
 #define STACK_H
 #include <iostream>
 
+// | Step                  | Description                                                  |
+// | --------------------- | ------------------------------------------------------------ |
+// | 1. **Iterator class** | Holds a pointer/reference to your current node/state         |
+// | 2. **`operator*()`**  | Returns current value (`T&`)                                 |
+// | 3. **`operator++()`** | Moves iterator forward (or however your structure traverses) |
+// | 4. **`operator!=()`** | Ends loop when current node reaches `nullptr` or a sentinel  |
+// | 5. **`begin()`**      | Returns iterator starting from first element                 |
+// | 6. **`end()`**        | Returns iterator pointing to end (`nullptr`)                 |
+
+
 template<typename T>
 class Stack {
     struct Node {
@@ -37,6 +47,36 @@ public:
     void Pop();
 
     void PrintElements();
+
+    class Iterator {
+    private:
+        Node *current;
+
+    public:
+        explicit Iterator(Node *node): current(node) {
+        }
+
+        T &operator*() const {
+            return current->val;
+        }
+
+        Iterator &operator++() {
+            if (current) current = current->next;
+            return *this;
+        }
+
+        bool operator!=(const Iterator &other) const {
+            return current != other.current;
+        }
+    };
+
+    Iterator begin() {
+        return Iterator(top);
+    }
+
+    Iterator end() {
+        return Iterator(nullptr);
+    }
 };
 
 

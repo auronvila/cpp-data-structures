@@ -20,25 +20,28 @@ int main() {
     // std::cout << "----" << std::endl;
     // myList.PrintLinkedList();
 
-    // Stack<int> myStack;
+    Stack<int> myStack;
     // std::cout << myStack.Size() << std::endl;
     // std::cout << myStack.IsEmpty() << std::endl;
-    //
-    // myStack.Push(1);
-    // myStack.Push(2);
-    // myStack.Push(3);
-    // myStack.Pop();
+
+    myStack.Push(1);
+    myStack.Push(2);
+    myStack.Push(3);
+    myStack.Pop();
+    for (int item: myStack) {
+        std::cout << item << std::endl;
+    }
     // myStack.PrintElements();
 
-    Queue<int> my_queue;
-    my_queue.Push(1);
-    my_queue.Push(2);
-    my_queue.Push(3);
-    // my_queue.Pop();
-
-    for (auto queue: my_queue) {
-        std::cout << queue << std::endl;
-    }
+    // Queue<int> my_queue;
+    // my_queue.Push(1);
+    // my_queue.Push(2);
+    // my_queue.Push(3);
+    // // my_queue.Pop();
+    //
+    // for (auto queue: my_queue) {
+    //     std::cout << queue << std::endl;
+    // }
 
 
     // std::cout << my_queue.Size() << std::endl;
