@@ -4,6 +4,7 @@
 #include<string>
 #include "dsa/queue.h"
 #include "dsa/map.h"
+#include"dsa/doublyLinkedList.h"
 
 int main() {
     // LinkedList myList;
@@ -20,17 +21,17 @@ int main() {
     // std::cout << "----" << std::endl;
     // myList.PrintLinkedList();
 
-    Stack<int> myStack;
+    // Stack<int> myStack;
     // std::cout << myStack.Size() << std::endl;
     // std::cout << myStack.IsEmpty() << std::endl;
 
-    myStack.Push(1);
-    myStack.Push(2);
-    myStack.Push(3);
-    myStack.Pop();
-    for (int item: myStack) {
-        std::cout << item << std::endl;
-    }
+    // myStack.Push(1);
+    // myStack.Push(2);
+    // myStack.Push(3);
+    // myStack.Pop();
+    // for (int item: myStack) {
+    // std::cout << item << std::endl;
+    // }
     // myStack.PrintElements();
 
     // Queue<int> my_queue;
@@ -59,5 +60,17 @@ int main() {
     // my_map.Remove(2);
     // std::cout << my_map[5] << std::endl;
     // my_map.PrintItems();
+
+    DoublyLinkedList<int> myDoublyLinkedList;
+    myDoublyLinkedList.append(1);
+    myDoublyLinkedList.append(2);
+    myDoublyLinkedList.append(3);
+    myDoublyLinkedList.prepend(0);
+
+    std::cout << "head val: " << myDoublyLinkedList.getHeadVal() << std::endl;
+    std::cout << "tail val: " << myDoublyLinkedList.getTailVal() << std::endl;
+    std::cout << "length: " << myDoublyLinkedList.getLength() << std::endl;
+    myDoublyLinkedList.printForward();
+    myDoublyLinkedList.printBackWards();
     return 0;
 }

@@ -13,5 +13,7 @@ add_executable(data_structures
 
         dsa/map.h
 
+        dsa/doublyLinkedList.h
+
         main.cpp
 )
