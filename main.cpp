@@ -67,10 +67,21 @@ int main() {
     myDoublyLinkedList.append(3);
     myDoublyLinkedList.prepend(0);
 
+    // myDoublyLinkedList.set(0,99);
+
+
+    // myDoublyLinkedList.remove(3);
+    // myDoublyLinkedList.pop();
+    // myDoublyLinkedList.shift();
+
+    // std::cout << "get val at specific index: " << myDoublyLinkedList.get(1) << std::endl;
+    std::vector<int> myArr = myDoublyLinkedList.toArray();
+    for (int i = 0; i < myArr.capacity(); ++i) {
+        std::cout << "item of the arrayyy: " << myArr[i] << std::endl;
+    }
     std::cout << "head val: " << myDoublyLinkedList.getHeadVal() << std::endl;
     std::cout << "tail val: " << myDoublyLinkedList.getTailVal() << std::endl;
     std::cout << "length: " << myDoublyLinkedList.getLength() << std::endl;
     myDoublyLinkedList.printForward();
-    myDoublyLinkedList.printBackWards();
     return 0;
 }
